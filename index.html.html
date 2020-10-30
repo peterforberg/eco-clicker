@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Eco-Clicker</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/eco-style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/eco-script.js"></script>
+    <script>
+      function start(){
+        var name = prompt("Hello! This is a resource management sim; don't get overwhelmed! Also, this should only be played on desktop, so don't even try if you're on your phone. \n \nWhat is your farm's name?");
+        document.getElementById("name").innerHTML = name;
+      }
+      
+    </script>
+  </head>  
+  <body onload="start()">
+    <header id="name" style="display:flex; justify-content:center; font-size: 2em;">
+      
+    </header>
+    
+  <div id="flex">
+    
+      <div id="farmbuttons">
+        <p><button type="button" onclick="seedClick(); clickClick()" class="button" value="click" id="seedb" style="display:flex">plant seed</button></p>
+        <p><button type="button" onclick="harvestClick(); clickClick()" class="button" value="click" id="harvestb" style="display:none; text-align:center"> harvest</button></p>
+        <p><button type="button" onclick="landClick(); clickClick()" class="button" value="click" style="display:none" id="landb">buy land</button></p>
+        <p><button type="button" onclick="tractorClick(); clickClick()" class="button" value="click" style="display:none" id="tractorb">buy tractor</button></p>
+        <p><button type="button" onclick="fertilizerClick(); clickClick()" class="button" value="click" style="display:none" id="fertilizerb">use fertilizer</button></p>
+        <p><button type="button" onclick="workerClick(); clickClick()" class="button" value="click" style="display:none" id="workerb">hire worker</button></p>
+        <p><button type="button" onclick="treeClick(); clickClick()" class="button" value="click" style="display:none" id="treeb">plant tree</button></p>
+      </div>
+      <div id="bugbuttons">
+        <p><button type="button" onclick="catchBug(); clickClick()" class="button button2" value="click" id="catchbugb" style="display:flex">catch bug</button></p>
+        <p><button type="button" onclick="pesticideClick(); clickClick()" class="button button2" value="click" style="display:none" id="pesticideb">use pesticides</button></p>
+        <p><button type="button" onclick="clickClick(); bugcatcherClick()" class="button button2" value="click" style="display:none" id="bugcatcherb">hire bugcatcher</button></p>
+        <p><button type="button" onclick="clickClick(); silkClick()" class="button button2" value="click" style="display:none" id="silkb">build silk farm</button></p>
+        <p><button type="button" onclick="clickClick(); hiveClick()" class="button button2" value="click" style="display:none" id="hiveb">build hive</button></p>
+        <p><button type="button" onclick="clickClick(); compostClick()" class="button button2" value="click" style="display:none" id="compostb">compost</button></p>
+        <p><button type="button" onclick="clickClick(); bioClick()" class="button button2" value="click" style="display:none" id="biob">create biofuel</button></p>
+        <p><button type="button" onclick="clickClick(); gridClick()" class="button button2" value="click" style="display:none" id="gridb">create biofuel energy grid</button></p>
+        <p><button type="button" onclick="clickClick(); rbbotClick()" class="button button2" value="click" style="display:none" id="rbbotb">research bugbots</button></p>
+        <p><button type="button" onclick="clickClick(); bbotClick()" class="button button2" value="click" style="display:none" id="bbotb">create bugbot</button></p>
+        <p><button type="button" onclick="clickClick(); bcbbotClick()" class="button button2" value="click" style="display:none" id="bcbbotb">create bugbot creating bugbot</button></p>
+        <p><button type="button" onclick="clickClick(); sbbotClick()" class="button button2" value="click" style="display:none" id="sbbotb">convert to surveillance bugbots</button></p>
+        <p><button type="button" onclick="clickClick(); authoritarianClick()" class="button button2" value="click" style="display:none" id="authoritarianb">create bug authoritarian state</button></p>
+        <p><button type="button" onclick="clickClick(); socialismClick()" class="button button2" value="click" style="display:none" id="socialismb">create bug socialism</button></p>
+      </div>
+      <div id="renewbuttons">
+        <p><button type="button" onclick="solarClick(); clickClick()" class="button button3" value="click" style="display:none" id="solarb">buy solar panels</button></p>
+        <p><button type="button" onclick="sresearchClick(); clickClick()" class="button button3" value="click" style="display:none" id="sresearchb">hire sustainability researcher</button></p>
+        <p><button type="button" onclick="windClick(); clickClick()" class="button button3" value="click" style="display:none" id="windb">buy wind turbine</button></p>
+        <p><button type="button" onclick="excessClick(); clickClick()" class="button button3" value="click" id="excessb" style="display:none">export excess energy</button></p>
+        <p><button type="button" onclick="clandClick(); clickClick()" class="button button3" value="button button3" style="display:none" id="clandb">convert land to vertical farm</button></p>
+        <p><button type="button" onclick="vegClick(); clickClick()" class="button button3" value="button button3" style="display:none" id="vegb">create plant-based fuel</button></p>
+        <p><button type="button" onclick="convertClick(); clickClick()" class="button button3" value="click" style="display:none" id="convertb">convert farm structures to natural heating and cooling</button></p>
+        <p><button type="button" onclick="hydroClick(); clickClick()" class="button button3" value="click" style="display:none" id="hydrob">build hydroelectric dam</button></p>
+        <p><button type="button" onclick="fishClick(); clickClick()" class="button button3" value="click" style="display:none" id="fishb">relocate fish</button></p>
+        <p><button type="button" onclick="friendlyClick(); clickClick()" class="button button3" value="click" style="display:none" id="friendlyb">make panels and turbines bird-friendly</button></p>
+        <p><button type="button" onclick="bribesClick(); clickClick()" class="button button3" value="click" style="display:none" id="bribesb">bribe politicians to recognize rights of all living things</button></p>
+        <p><button type="button" onclick="rfusionClick(); clickClick()" class="button button3" value="click" style="display:none" id="rfusionb">research fusion energy</button></p>
+        <p><button type="button" onclick="clickClick(); fusionClick()" class="button button3" value="click" style="display:none" id="fusionb">build fusion reactor</button></p>
+        <p><button type="button" onclick="clickClick(); emonopolizeClick()" class="button button3" value="click" style="display:none" id="emonopolizeb">monopolize energy</button></p>
+        <p><button type="button" onclick="clickClick(); greenClick()" class="button button3" value="click" style="display:none" id="greenb">write green constitution</button></p>
+        <p><button type="button" onclick="clickClick(); demoClick()" class="button button3" value="click" style="display:none" id="demob">establish green democracy</button></p>
+        <p><button type="button" onclick="shelterClick(); clickClick()" class="button button3" value="click" style="display:none" id="shelterb">build climate shelter</button></p>
+        <p><button type="button" onclick="clickClick(); impoverishedClick()" class="button button3" value="click" style="display:none" id="impoverishedb">rent climate shelter to impoverished</button></p>
+        <p><button type="button" onclick="clickClick(); hrClick()" class="button button3" value="click" style="display:none" id="hrb">hire HR team</button></p>
+        <p><button type="button" onclick="clickClick(); paperlessClick()" class="button button3" value="click" style="display:none" id="paperlessb">go paperless</button></p>
+      </div>
+      <div id="industrybuttons">
+        <p><button type="button" onclick="cresearchClick(); clickClick()" class="button button4" value="click" style="display:none" id="cresearchb">hire capital consultant</button></p>
+        <p><button type="button" onclick="clickClick(); automateClick()" class="button button4" value="click" style="display:none" id="automateb">automate capitalism</button></p>
+        <p><button type="button" onclick="clickClick(); accountantClick()" class="button button4" value="click" style="display:none" id="accountantb">hire accountant</button></p>
+        <p><button type="button" onclick="clickClick(); combineClick()" class="button button4" value="click" style="display:none" id="combineb">buy combine</button></p>
+        <p><button type="button" onclick="clickClick(); mineralClick()" class="button button4" value="click" style="display:none" id="mineralb">sell minerals</button></p>
+        <p><button type="button" onclick="clickClick(); minerClick()" class="button button4" value="click" style="display:none" id="minerb">hire miner</button></p>
+        <p><button type="button" onclick="clickClick(); oilClick()" class="button button4" value="click" style="display:none" id="oilb">export oil</button></p>
+        <p><button type="button" onclick="clickClick(); bribecClick()" class="button button4" value="click" style="display:none" id="bribecb">bribe politicians</button></p>
+        <p><button type="button" onclick="clickClick(); pumpClick()" class="button button4" value="click" style="display:none" id="pumpb">build oil pump</button></p>
+        <p><button type="button" onclick="clickClick(); monpolizeoClick()" class="button button4" value="click" style="display:none" id="monopolizeob">monopolize oil</button></p>
+        <p><button type="button" onclick="clickClick(); spaceClick()" class="button button4" value="click" style="display:none" id="spaceb">invest in space travel</button></p>
+        <p><button type="button" onclick="rocketClick(); clickClick()" class="button button4" value="click" style="display:none" id="rocketb">launch rocket</button></p>
+        <p><button type="button" onclick="spaceoClick(); clickClick()" class="button button4" value="click" style="display:none" id="spaceob">build space oil pump</button></p>
+        <p><button type="button" onclick="exportsoClick(); clickClick()" class="button button4" value="click" style="display:none" id="exportsob">export space oil</button></p>
+        <p><button type="button" onclick="clickClick(); wealthyClick()" class="button button4" value="click" style="display:none" id="wealthyb">rent climate shelter to wealthy</button></p>
+        <p><button type="button" onclick="clickClick(); monopolizesClick()" class="button button4" value="click" style="display:none" id="monopolizesb">monopolize survival</button></p>
+        <p><button type="button" onclick="clickClick(); cauthoritarianClick()" class="button button4" value="click" style="display:none" id="cauthoritarianb">declare authoritarian government</button></p>
+        <p><button type="button" onclick="clickClick(); prClick()" class="button button4" value="click" style="display:none" id="prb">hir PR team</button></p>
+        <p><button type="button" onclick="clickClick(); mineralrClick()" class="button button4" value="click" style="display:none" id="mineralrb">secure mineral rights to land</button></p>
+      
+  </div>
+    <div id="variables">
+      <div id="inner">
+        
+    <b>Money: <span id="money"></span></b><br> <p>
+      </p>
+    Clicks remaining: <span id="clicks"></span><p>
+      </p>  
+      
+    Seeds planted: <span id="seeds"></span><br>
+    Bugs: <span id="bug"></span><br>
+    Caught bugs: <span id="cbugs"></span><br>
+    <div id="landd" style="display:flex">Land used:&nbsp<span id="land"></span><br></div>
+    <div id="workerd" style="display:none">Farmhands:&nbsp<span id="workers"></span><br></div>
+    <div id="tractord" style="display:none">Tractors running:&nbsp<span id="tractor"></span><br></div>
+    <div id="fertilizerd" style="display:none">Fertilizer used:&nbsp<span id="fertilizer"></span><br></div>
+    <div id="pesticided" style="display:none">Pesticides:&nbsp<span id="pesticide"></span><br></div>
+    <div id="sresearchd" style="display:none">Sustainability research produced:&nbsp<span id="sresearch"></span><br></div>
+    <div id="sresearchersd" style="display:none">Sustainability researchers:&nbsp<span id="sresearchers"></span><br></div>
+    <div id="cresearchd" style="display:none">Capital research produced:&nbsp<span id="cresearch"></span><br></div>
+    <div id="cresearchersd" style="display:none">Capital consultants:&nbsp<span id="cresearchers"></span><br></div>
+    <div id="solard" style="display:none">Solar panels:&nbsp<span id="solar"></span><br></div>
+    <div id="windd" style="display:none">Wind turbines:&nbsp<span id="wind"></span><br></div>
+    <div id="hydrod" style="display:none">Hydroelectric dams:&nbsp<span id="hydro"></span><br></div>
+    <div id="bugcatcherd" style="display:none">Bugcatchers:&nbsp<span id="bugcatcher"></span><br></div>
+    <div id="compostd" style="display:none">Compost:&nbsp<span id="compost"></span><br></div>
+    <div id="silkd" style="display:none">Silk farms:&nbsp<span id="silk"></span><br></div>
+    <div id="hived" style="display:none">Honey hives:&nbsp<span id="hive"></span><br></div>
+    <div id="biod" style="display:none">Biofuel:&nbsp<span id="bio"></span><br></div>
+    <div id="bbotd" style="display:none">Bugbots:&nbsp<span id="bbot"></span><br></div>
+    <div id="sbbotd" style="display:none">Surveillance Bugbots:&nbsp<span id="sbbot"></span><br></div>
+    <div id="bcbbotd" style="display:none">Bugbot creating bugbots:&nbsp<span id="bcbbot"></span><br></div>
+    <div id="clandd" style="display:none">Vertical farms:&nbsp<span id="cland"></span><br></div>
+    <div id="vegd" style="display:none">Plant-based fuel:&nbsp<span id="veg"></span><br></div>
+    <div id="treed" style="display:none">Trees:&nbsp<span id="tree"></span><br></div>
+    <div id="accountantd" style="display:none">Accountants:&nbsp<span id="accountant"></span><br></div>
+    <div id="combined" style="display:none">Combines:&nbsp<span id="combine"></span><br></div>
+    <div id="minerald" style="display:none">Minerals:&nbsp<span id="mineral"></span><br></div>
+    <div id="minerd" style="display:none">Miners:&nbsp<span id="miner"></span><br></div>
+    <div id="pumpd" style="display:none">Pumps:&nbsp<span id="pump"></span><br></div>
+    <div id="oild" style="display:none">Oil:&nbsp<span id="oil"></span><br></div>
+    <div id="spumpd" style="display:none">Space pumps:&nbsp<span id="spump"></span><br></div>
+    <div id="shelterd" style="display:none">Shelters:&nbsp<span id="shelter"></span><br></div>
+    <div id="wealthyd" style="display:none">Climate mansions:&nbsp<span id="wealthy"></span><br></div>
+    <div id="impoverishedd" style="display:none">Climate slums:&nbsp<span id="impoverished"></span><br></div>
+      <p>  
+      </p>
+    <div id="usaged" style="display:flex">Net energy production:&nbsp<span id="usage"></span><br></div>
+    <div id="laborlawsd" style="display:none">Labor laws violated:&nbsp<span id="laborlaws"></span><br></div>
+    <!--<div id="carbond" style="display:flex">Carbon used:&nbsp<span id="carbon"></span><br></div>
+    <div id="renewd" style="display:flex">Renewable energy produced:&nbsp<span id="renew"></span><br></div>-->
+    <div id="indigd" style="display:none">Indigenous land ruined:&nbsp<span id="indig"></span><br></div>
+    <div id="gridd" style="display:none">Energy grids:&nbsp<span id="grid"></span><br></div>
+    <div id="badand" style="display:none">Animals displaced:&nbsp<span id="badan"></span><br></div>
+    <div id="imaged" style="display:none">"Farm's" public image:&nbsp<span id="image"></span><br></div>
+    <div id="pollutantsd" style="display:none">Pollutants released:&nbsp<span id="pollutants"></span><br></div>
+    <div id="compused" style="display:flex">Energy wasted on clicker game:&nbsp<span id="compuse"></span><br></div>    
+      </div>
+  </div>
+    
+    </div>
+  </body>
+</html>

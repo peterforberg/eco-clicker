@@ -1,0 +1,60 @@
+/* CSS files add styling rules to your content */
+
+#flex {
+  display: flex;
+}
+
+#farmbuttons {
+  width: 17.5%;
+  text-align: center;
+}
+
+#bugbuttons {
+  width: 17.5%;
+  text-align: center;
+}
+
+#renewbuttons {
+  width: 17.5%;
+  text-align: center;
+}
+
+#industrybuttons {
+  width: 17.5%;
+  text-align: center;
+}
+#variables {
+  position: fixed;
+  height:100%;
+  width: 30%;
+  line-height: 1.5em;
+  right: 10px;
+}
+#inner {
+  height: 100%;
+  overflow-y: scroll;
+}
+button {
+  background-color: #4CAF50; /* Green */
+  border: 2px solid #244d1c;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  width: 12em;
+}
+
+.button2 {background-color: #bc79e0;}
+.button3 {background-color: #3661cf;}
+.button4 {background-color: #d4394b;}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #84bf94;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
